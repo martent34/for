@@ -1,0 +1,191 @@
+body {
+    background-color: #D4AEFD !important;
+    box-sizing: border-box;
+
+}
+
+.input {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 25px;
+    padding: 6px 18px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: -7px -7px 5px 4px #c58eff;
+    transition: all 0.8s;
+}
+
+.input:focus-visible {
+    box-shadow: 7px 7px 5px 4px #c58eff;
+    border: none !important;
+    transition: all 0.8s;
+    outline: none;
+}
+
+.but {
+    padding: 10px 50px;
+    border: none;
+    background-color: #c58eff;
+    color: white;
+    border-radius: 50px;
+    animation: breathe 2s ease-in-out infinite;
+}
+
+
+
+/* عند-hover أو وقت الضغط نخلي التفاعل فوري */
+.but:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.but:active {
+    transform: translateY(0) scale(0.99);
+}
+
+/* الحركة الأساسية — تكبير خفيف + تقوية/ضعف الظل */
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 8px 24px #c58eff;
+        filter: brightness(1);
+    }
+
+    45% {
+        transform: scale(1.09);
+        box-shadow: 0 18px 42px #c58eff;
+        filter: brightness(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 24px #c58eff;
+        filter: brightness(1);
+    }
+}
+
+/* لاحظة إمكانية تقليل الحركة للاحترام تفضيلات المستخدمين */
+@media (prefers-reduced-motion: reduce) {
+    .but {
+        animation: none;
+        transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+}
+
+/* home */
+
+.words {
+    color: white;
+    letter-spacing: 1px;
+    font-style: italic;
+    font-size: 20px;
+    text-align: right;
+    line-height: 30px;
+    padding: 10px 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text {
+    color: white;
+    font-size: 26px;
+}
+
+/* home2 */
+
+.slider {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* أزرار */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #D4AEFD;
+    border: none;
+    font-size: 20px;
+    padding: 10px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+    background: none;
+    user-select: none;
+}
+
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+
+
+
+
+
+
+.hee{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px; /* حجم أصغر */
+    color: rgba(255, 100, 150, 0.6); /* لون وردي فاتح وشفاف شوية */
+    animation: floatUp 4s linear forwards;
+    opacity: 0.8;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(0.9);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-50vh) scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(-100vh) scale(0.8);
+      opacity: 0;
+    }
+  }
+
+
+
+  
